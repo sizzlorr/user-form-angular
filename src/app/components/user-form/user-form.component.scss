@@ -1,0 +1,65 @@
+.user-form {
+  margin: 32px auto;
+  max-width: 800px;
+  width: 800px;
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 5%;
+    border: solid 2px #e0e0e0;
+    border-radius: 4px;
+
+    &__title {
+      display: block;
+      position: absolute;
+      top: -20px;
+      left: 8px;
+      padding: 8px;
+      font-size: 16px;
+      line-height: 18px;
+      background-color: #fff;
+    }
+
+    &__gender-section, mat-radio-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    mat-radio-group {
+      margin-top: 8px;
+    }
+
+    mat-radio-button {
+      margin: 4px 8px;
+    }
+  }
+}
+
+@media all and (max-width: 1080px) {
+  .user-form {
+    max-width: 70vw;
+    width: 70vw;
+  }
+}
+
+@media all and (max-width: 770px) {
+  .user-form {
+    max-width: 90vw;
+    width: 90vw;
+
+    &__form {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+}
